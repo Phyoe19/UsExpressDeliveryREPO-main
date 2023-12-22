@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.packageDelivery.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.packageDelivery.entities.Rider;
+
+/**
+ * @author Acer
+ *
+ */
+
+@Repository
+public interface RiderRepo extends JpaRepository<Rider, Integer>{
+
+	Rider findByName(String name);
+	
+}
